@@ -1,0 +1,36 @@
+.shopping {
+  padding: 40px 6%;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product {
+  padding: 15px;
+  border: 1px solid #eee;
+}
+
+.product img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.product button {
+  padding: 10px 15px;
+  background: #a7754e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}

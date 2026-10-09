@@ -1,0 +1,21 @@
+.footer {
+  background: #292321;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.footer h2 {
+  color: #e5b895;
+}
+
+.footer a {
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer p {
+  color: #ddd;
+}

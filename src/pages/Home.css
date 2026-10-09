@@ -1,0 +1,366 @@
+.home-page {
+  width: 100%;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #292522;
+  overflow: hidden;
+}
+
+.home-page * {
+  box-sizing: border-box;
+}
+
+.home-page a {
+  text-decoration: none;
+}
+
+/* 1. WELCOME BANNER */
+.welcome-section {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  padding: 70px 9%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 17, 16, 0.78) 0%,
+      rgba(20, 17, 16, 0.48) 48%,
+      rgba(20, 17, 16, 0.05) 100%
+    ),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1800")
+    center 35% / cover no-repeat;
+  color: white;
+}
+
+.welcome-content {
+  max-width: 600px;
+}
+
+.welcome-label,
+.section-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.welcome-label {
+  color: #e7c7a5;
+}
+
+.welcome-content h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  margin: 12px 0;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.welcome-content h2 {
+  font-size: clamp(21px, 3vw, 30px);
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.welcome-content > p:not(.welcome-label) {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 480px;
+  color: #f1ece8;
+  margin-bottom: 30px;
+}
+
+.welcome-btn {
+  display: inline-block;
+  background: #d9ad83;
+  color: #211b17;
+  padding: 15px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #d9ad83;
+  transition: 0.3s ease;
+}
+
+.welcome-btn:hover {
+  background: transparent;
+  color: white;
+}
+
+/* 2. QUOTES SECTION */
+.quotes-section {
+  padding: 85px 8%;
+  text-align: center;
+  background: #faf7f3;
+}
+
+.section-label {
+  color: #a77751;
+  margin-bottom: 14px;
+}
+
+.quotes-section > h2,
+.achievements-section > h2,
+.gallery-section > h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin: 0 0 45px;
+  font-weight: 600;
+}
+
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.quote-card {
+  background: white;
+  padding: 32px 25px;
+  border: 1px solid #eee4da;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(50, 35, 20, 0.08);
+}
+
+.quote-card span {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 55px;
+  line-height: 1;
+  color: #c3946b;
+}
+
+.quote-card p {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #51453c;
+  margin-bottom: 0;
+}
+
+/* 3. ACHIEVEMENTS SECTION */
+.achievements-section {
+  padding: 80px 8%;
+  text-align: center;
+  background: #302721;
+  color: white;
+}
+
+.achievements-section .section-label {
+  color: #e0b58e;
+}
+
+.achievements-section > h2 {
+  margin-bottom: 50px;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.achievement {
+  padding: 20px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement:last-child {
+  border-right: none;
+}
+
+.achievement h3 {
+  color: #e0b58e;
+  font-size: clamp(27px, 4vw, 40px);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.achievement p {
+  color: #e6ded6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 4. FASHION GALLERY */
+.gallery-section {
+  padding: 85px 8%;
+  text-align: center;
+  background: #fff;
+}
+
+.gallery-section > h2 {
+  margin-bottom: 12px;
+}
+
+.gallery-description {
+  color: #77716c;
+  margin: 0 0 40px;
+  line-height: 1.8;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  height: 350px;
+  overflow: hidden;
+  background: #f0e9e2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+/* 5. FOOTER */
+.footer {
+  background: #211c19;
+  color: #eee6df;
+  padding: 60px 8% 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.3fr;
+  gap: 50px;
+  padding-bottom: 45px;
+}
+
+.footer-about h2 {
+  font-size: 32px;
+  color: #e0b58e;
+  margin: 0 0 18px;
+}
+
+.footer-container h3 {
+  font-size: 17px;
+  margin: 5px 0 22px;
+  color: #fff;
+}
+
+.footer-about p,
+.footer-contact p {
+  color: #c5bcb5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links a {
+  color: #c5bcb5;
+  margin-bottom: 13px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e0b58e;
+}
+
+.footer-bottom {
+  border-top: 1px solid #463b33;
+  text-align: center;
+  padding: 22px 0;
+}
+
+.footer-bottom p {
+  color: #b8ada4;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* RESPONSIVE DESIGN: TABLETS */
+@media (max-width: 900px) {
+  .welcome-section {
+    min-height: 500px;
+    padding: 60px 6%;
+  }
+
+  .quotes-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement:nth-child(2) {
+    border-right: none;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* RESPONSIVE DESIGN: MOBILE */
+@media (max-width: 600px) {
+  .welcome-section {
+    min-height: 480px;
+    padding: 50px 7%;
+    background-position: 58% center;
+  }
+
+  .welcome-content h1 {
+    letter-spacing: -1px;
+  }
+
+  .quotes-section,
+  .achievements-section,
+  .gallery-section {
+    padding: 60px 6%;
+  }
+
+  .quotes-container,
+  .achievements-container,
+  .gallery-container,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-card {
+    padding: 28px 22px;
+  }
+
+  .achievement {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .achievement:last-child {
+    border-bottom: none;
+  }
+
+  .gallery-item {
+    height: 380px;
+  }
+
+  .footer {
+    padding: 45px 7% 0;
+  }
+
+  .footer-container {
+    gap: 25px;
+  }
+}
+

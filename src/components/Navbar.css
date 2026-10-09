@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: white;
+}
+
+.navbar h2 {
+  color: #a7754e;
+}
+
+.navbar a {
+  margin-left: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #a7754e;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar a {
+    margin: 5px;
+  }
+}

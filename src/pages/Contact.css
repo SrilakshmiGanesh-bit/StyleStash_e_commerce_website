@@ -1,0 +1,42 @@
+.contact {
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+  margin-top: 35px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+.contact button {
+  padding: 12px;
+  border: none;
+  background: #a7754e;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
