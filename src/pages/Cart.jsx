@@ -5,6 +5,10 @@ function Cart({ cart, updateQuantity, removeFromCart }) {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+   function handleSubmit() {
+    alert("Your order has been placed successfully!");
+
+   }
 
   return (
     <div className="cart">
@@ -40,6 +44,7 @@ function Cart({ cart, updateQuantity, removeFromCart }) {
           ))}
 
           <h2>Total: ₹{total}</h2>
+          <button  onClick={handleSubmit} className="checkout-button">Buy Now</button>
         </>
       )}
     </div>

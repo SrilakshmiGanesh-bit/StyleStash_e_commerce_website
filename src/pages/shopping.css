@@ -1,11 +1,21 @@
 .shopping {
   padding: 40px 6%;
   text-align: center;
+  min-height: 400px;
+}
+
+.shopping h1 {
+  font-size: 32px;
+  color: #2c2c2c;
+}
+
+.shopping > p {
+  color: #666;
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
@@ -13,12 +23,29 @@
 .product {
   padding: 15px;
   border: 1px solid #eee;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
   width: 100%;
   height: 280px;
   object-fit: cover;
+  border-radius: 6px;
+}
+
+.product h3 {
+  margin: 15px 0 8px;
+}
+
+.product p {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .product button {
@@ -26,10 +53,21 @@
   background: #a7754e;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
+.product button:hover {
+  background: #805333;
+}
+
+@media (max-width: 700px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 450px) {
   .products {
     grid-template-columns: 1fr;
   }

@@ -30,3 +30,10 @@
     flex-direction: column;
   }
 }
+.checkout-button{
+  background-color: #a7754e;
+  color: white;
+  padding: 12px 20px;
+  border: none; 
+  
+}

@@ -127,7 +127,7 @@ function Home() {
       </section>
 
       {/* 5. Footer */}
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="footer-container">
           <div className="footer-about">
             <h2>StyleStash.</h2>
@@ -157,7 +157,7 @@ function Home() {
             © 2026 StyleStash. All rights reserved.
           </p>
         </div>
-      </footer>
+      </footer> */}
 
     </div>
   );

@@ -1,0 +1,156 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full Page Background */
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0, #eee1f5);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Login / Signup Card */
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(80, 20, 50, 0.15);
+}
+
+/* Brand Name */
+.login-card h1 {
+  text-align: center;
+  color: #a12663;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* Form Heading */
+.login-card h3 {
+  text-align: center;
+  color: #292929;
+  font-size: 23px;
+  margin: 20px 0 28px;
+}
+
+/* Labels */
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #383838;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.login-card input {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ded6da;
+  border-radius: 9px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.login-card input::placeholder {
+  color: #aaa;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #a12663;
+  box-shadow: 0 0 0 3px rgba(161, 38, 99, 0.1);
+}
+
+/* Password Hint */
+.password-hint {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Main Sign In / Sign Up Button */
+.login-card button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 9px;
+  background: #a12663;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.login-card button[type="submit"]:hover {
+  background: #7d194b;
+  transform: translateY(-2px);
+}
+
+/* Switch Between Sign In and Sign Up */
+.switch-mode {
+  margin-top: 24px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.login-card .switch-button {
+  display: inline;
+  width: auto;
+  margin-left: 5px;
+  padding: 3px;
+  border: none;
+  background: transparent;
+  color: #a12663;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-card .switch-button:hover {
+  color: #7d194b;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-page {
+    padding: 20px 14px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .login-card h1 {
+    font-size: 30px;
+  }
+
+  .login-card h3 {
+    font-size: 21px;
+  }
+}
