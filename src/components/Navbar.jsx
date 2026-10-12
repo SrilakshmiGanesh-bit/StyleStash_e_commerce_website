@@ -7,7 +7,7 @@ function Navbar({ cartCount = 0 }) {
       <h2>StyleStash</h2>
 
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/shopping">Shopping</Link>

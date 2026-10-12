@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -12,68 +11,74 @@ function Login() {
 
   const navigate = useNavigate();
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  
+function handleSubmit(e) {
+  e.preventDefault();
 
+  const users = JSON.parse(
+    localStorage.getItem("stylestashUsers") || "[]"
+  );
+
+  const normalizedEmail = email.trim().toLowerCase();
+
+  if (isSignUp) {
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    if (isSignUp) {
-      const existingUser = localStorage.getItem("stylestashUser");
+    const existingUser = users.find(
+      (user) => user.email === normalizedEmail
+    );
 
-      if (existingUser) {
-        alert("An account already exists. Please sign in.");
-        setIsSignUp(false);
-        return;
-      }
-
-      const user = {
-        username,
-        email: email.trim().toLowerCase(),
-        password,
-      };
-
-      localStorage.setItem("stylestashUser", JSON.stringify(user));
-
-      alert("Account created successfully! Please sign in.");
-
+    if (existingUser) {
+      alert("Account already exists. Please sign in.");
       setIsSignUp(false);
-      setUsername("");
-      setPassword("");
-      setConfirmPassword("");
-    } else {
-      const savedUser = localStorage.getItem("stylestashUser");
-
-      if (!savedUser) {
-        alert("Please create an account first.");
-        setIsSignUp(true);
-        return;
-      }
-
-      const user = JSON.parse(savedUser);
-
-      if (
-        user.email === email.trim().toLowerCase() &&
-        user.password === password
-      ) {
-        alert("Login successful!");
-        navigate("/home");
-      } else {
-        alert("Invalid email or password!");
-      }
+      return;
     }
+
+    const newUser = {
+      username,
+      email: normalizedEmail,
+      password,
+    };
+
+    users.push(newUser);
+
+    localStorage.setItem(
+      "stylestashUsers",
+      JSON.stringify(users)
+    );
+
+    alert("Account created successfully!");
+    navigate("/home");
+  } else {
+    const existingUser = users.find(
+      (user) => user.email === normalizedEmail
+    );
+
+    if (!existingUser) {
+      alert("Account not found. Please sign up.");
+      setIsSignUp(true);
+      return;
+    }
+
+    if (existingUser.password !== password) {
+      alert("Incorrect password!");
+      return;
+    }
+
+    alert("Login successful!");
+    navigate("/home");
   }
+}
+
 
   return (
     <div className="login-page">
       <form className="login-card" onSubmit={handleSubmit}>
         <h1>StyleStash</h1>
         <p className="login-subtitle">Your style, your story.</p>
-
-        
-
         {isSignUp && (
           <>
             <label>Username</label>

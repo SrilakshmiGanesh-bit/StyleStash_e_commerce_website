@@ -41,8 +41,7 @@ function Contact() {
           <p>Location: Nagercoil, Tamil Nadu</p>
           <p>Hours: Monday – Saturday, 9 AM – 6 PM</p>
         </div>
-
-        <form onSubmit={handleSubmit}>
+         <form  className="contact-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
           <input
             id="name"
@@ -74,6 +73,18 @@ function Contact() {
 
           <button type="submit">Send Message</button>
         </form>
+        <div className="map-card">
+          <h2>Find Us</h2>
+          <p>Visit us or get directions to our store.</p>
+          <iframe className="map"
+            title="Map showing Nagercoil"
+            src="https://maps.google.com/maps?q=Chennai,Tamil%20Nadu,India&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
+       
       </div>
     </div>
   );

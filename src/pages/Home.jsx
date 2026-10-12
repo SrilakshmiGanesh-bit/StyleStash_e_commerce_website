@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Home.css";
 
@@ -126,38 +125,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 5. Footer */}
-      {/* <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-about">
-            <h2>StyleStash.</h2>
-            <p>
-              Discover your style, express your personality,
-              and make every outfit memorable.
-            </p>
-          </div>
-
-          <div className="footer-links">
-            <h3>Quick Links</h3>
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/shopping">Shopping</a>
-            <a href="/contact">Contact</a>
-          </div>
-
-          <div className="footer-contact">
-            <h3>Get In Touch</h3>
-            <p>Email: support@stylestash.com</p>
-            <p>Follow us for the latest trends.</p>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>
-            © 2026 StyleStash. All rights reserved.
-          </p>
-        </div>
-      </footer> */}
+      
 
     </div>
   );
